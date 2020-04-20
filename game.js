@@ -1,10 +1,10 @@
-var buttonColours = ['red', 'blue', 'green', 'yellow'];
+let buttonColours = ['red', 'blue', 'green', 'yellow'];
 
-var gamePattern = [];
-var userClickedPattern = [];
+let gamePattern = [];
+let userClickedPattern = [];
 
-var started = false;
-var level = 0;
+let started = false;
+let level = 0;
 
 $(document).keypress(function () {
   if (!started) {
@@ -15,7 +15,7 @@ $(document).keypress(function () {
 });
 
 $('.btn').click(function () {
-  var userChosenColour = $(this).attr('id');
+  let userChosenColour = $(this).attr('id');
   userClickedPattern.push(userChosenColour);
 
   playSound(userChosenColour);
