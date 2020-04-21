@@ -48,8 +48,8 @@ function nextSequence() {
   userClickedPattern = [];
   level++;
   $('#level-title').text('Level ' + level);
-  var randomNumber = Math.floor(Math.random() * 4);
-  var randomChosenColour = buttonColours[randomNumber];
+  let randomNumber = Math.floor(Math.random() * 4);
+  let randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
   $('#' + randomChosenColour)
@@ -67,7 +67,7 @@ function animatePress(currentColor) {
 }
 
 function playSound(name) {
-  var audio = new Audio('sounds/' + name + '.mp3');
+  let audio = new Audio('sounds/' + name + '.mp3');
   audio.play();
 }
 
